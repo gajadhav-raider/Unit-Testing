@@ -1,0 +1,26 @@
+// fetchData.js 
+function fetchData()
+{
+    return "Hello";
+}
+module.exports = fetchData;
+
+//common.js
+function common()
+{
+    return "Initial function is Executed";
+}
+module.exports = common;
+//fetchData.test.js
+const fetchData = require('./fetchData');
+const common = require('./common');
+beforeEach(()=>{
+    console.warn(common());
+})
+test("Before each 1",()=>{
+    expect(fetchData()).toBe('Hello');
+})
+
+test("Before each 2",()=>{
+    expect(fetchData()).toBe('Hello');
+})

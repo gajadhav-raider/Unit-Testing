@@ -1,0 +1,19 @@
+Step 1: npm init -y
+Step 2: npm install D jest
+Step 3: Crete file sum.js
+//sum.js file
+function sum (){
+    return ({name:"Gaurav"});
+}
+module.exports = sum;
+
+Step 4:Crete file sum.test.js
+//sum.test.js file
+const sum = require('./sum');
+test("Cheking test case",()=>{
+expect(sum()).toEqual({name:"Gaurav"});
+})
+
+Step 5:open the terminal run test file
+  usin this command npm run test
+      

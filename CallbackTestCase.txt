@@ -1,0 +1,21 @@
+//fetchData.js
+function fetchData(back)
+{
+return back("Hello Callback");
+}
+module.exports = fetchData;
+
+fetchData.test.js
+const fetchData =  require('./fetchData');
+test("This testcase for Callback",done=>{
+    function Callback(data)
+    {
+    try {
+        expect(data).toBe('Hello Callback');
+        done();
+    } catch (error) {
+        done(error);
+    }
+    }
+    fetchData(Callback);
+})
